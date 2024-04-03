@@ -12,9 +12,12 @@ taskForm.addEventListener("submit", function (e) {
   newLi.innerHTML = ambil_data;
   tampung.appendChild(newLi);
 
-  newLi.addEventListener("click", function () {
+  const newbut = document.createElement("button");
+  newbut.id = "button_h";
+  newbut.innerText = "Hapus";
+  newLi.appendChild(newbut);
+
+  newbut.addEventListener("click", function () {
     newLi.remove();
   });
 });
-
-// console.log(hapus);
